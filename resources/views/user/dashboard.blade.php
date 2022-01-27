@@ -14,9 +14,11 @@
                 </div>
             </div>
             <div class="row my-5">
+                @include('components.alert')
                 <table class="table">
                     <thead>
                         <tr>
+                            <th scope="col">#</th>
                             <th scope="col">Cover</th>
                             <th scope="col">Course name</th>
                             <th scope="col">Price</th>
@@ -25,8 +27,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @php
+                            $no = 1;
+                        @endphp
                         @forelse ($checkouts as $checkout)
                             <tr class="align-middle">
+                            <td>
+                                <b>{{ $no++ }}</b>
+                            </td>
                             <td width="18%">
                                 <img src={{ asset('images/item_bootcamp.png') }} height="120" alt="">
                             </td>
