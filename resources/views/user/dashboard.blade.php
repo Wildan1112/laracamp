@@ -27,13 +27,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @php
-                            $no = 1;
-                        @endphp
                         @forelse ($checkouts as $checkout)
                             <tr class="align-middle">
                             <td>
-                                <b>{{ $no++ }}</b>
+                                <b>{{ $loop->iteration }}</b>
                             </td>
                             <td width="18%">
                                 <img src={{ asset('images/item_bootcamp.png') }} height="120" alt="">
